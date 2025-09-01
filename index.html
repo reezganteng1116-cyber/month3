@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: #132131;
+      color: white;
+    }
+
+    /* layar loading full screen */
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 1;
+    }
+
+    /* animasi spinner */
+    .spinner {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #00ffcc;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    button {
+      display: block;
+      margin: auto;
+      border: 2px solid whitesmoke;
+      background-color: #00ffcc; 
+      color:black; 
+      border-radius:20%;
+      width:150px;
+      height: 100px;
+    }
+    .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    }
+    .section {
+        padding: 60px 20px; 
+        text-align: center;
+    }
+    section ul {
+       margin-bottom: 20px; 
+       color: #38bdf8;
+    }
+    .block-assignment {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 2px solid #00ffcc;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+#content {
+  display: none;
+  padding: 5px;
+  color: red;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Loading screen -->
+  <div id="loading">
+    <h1>Welcome to My Portfolio</h1>
+    <div class="spinner"></div>
+    <p>Loading your personalized content...!</p>
+  </div>
+
+  <!-- Konten utama -->
+  <div id="content">
+    <h1>My Portofolio</h1>
+  </div>
+  <hr>
+  <p align="center">Saya adalah santri PIT yang mengambil jurusan Teknik Informatika,dan sekrang sedang mengembangkan website portofolio ini.</p>
+  <button onclick="showAlert()">Klik ini!</button>
+  <hr>
+  <h2 align="center">Tugas JavaScript</h2>
+<section class="section">
+  <div class="container">
+    <div class="block-assignment">
+    <h2>tugas hari pertama</h2>
+    <p>Membuat website portofolio sederhana menggunakan HTML, CSS, dan JavaScript.</p>
+    <div class="day-one">
+        <p align="center">Tiga fremwork dan library JavaScript:</p>
+        <ul>
+            <li>React.js</li>
+            <li>Vue.js</li>
+            <li>Angular</li>
+        </ul>
+        <div class="penjelasan">
+            <p align="center">React.js: adalah library JavaScript untuk membangun antarmuka pengguna, Vue.js adalah framework progresif untuk membangun UI, dan Angular adalah platform untuk membangun aplikasi web.</p>
+            <ul>
+                <li>Dikembangkan oleh Facebook.</li>
+                <li>Fokus pada pembuatan UI (User Interface) berbasis komponen.</li>
+                <li>Banyak digunakan untuk aplikasi web interaktif dan SPA (Single Page Application).</li>
+            </ul>
+            <hr>
+            <p align="center">Vue.js: adalah framework progresif untuk membangun antarmuka pengguna, dan Angular adalah platform untuk membangun aplikasi web.</p>
+            <ul>
+                <li>Ringan, fleksibel, dan mudah dipelajari.</li>
+                <li>Cocok untuk integrasi bertahap (bisa dipakai sebagian atau penuh).</li>
+                <li>Banyak digunakan untuk membuat UI yang reaktif dengan sintaks yang sederhana.</li>
+            </ul>
+            <hr>
+            <p align="center">Angular: adalah platform untuk membangun aplikasi web.</p>
+            <ul>
+                <li>Dikembangkan oleh Google.</li>
+                <li>Framework full-featured untuk membangun aplikasi web skala besar.</li>
+                <li>Mendukung MVC/MVVM, data binding dua arah, dependency injection, dan tools bawaan lengkap.</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  </div>
+  </section>
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      }, 3000);
+    });
+
+    function showAlert() {
+        alert("Halo nama saya Jaisyurrahman");
+    }
+    if (confirm("Apakah kamu sudah siap untuk melanjutkan?")) {
+        alert("OK, Selamat datang di website saya!");
+    } else {
+        alert("Kamu tidak siap untuk melanjutkan!,silahkan kembali,jangan balik lagi!!!");
+    }
+  </script>
+
+</body>
+</html>
