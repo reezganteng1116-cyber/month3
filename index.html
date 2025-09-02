@@ -72,6 +72,25 @@
     margin: 0 auto;
     border: 2px solid #00ffcc;
     }
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      font-family: Arial, sans-serif;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #00ffcc;
+      color:black;
+    }
+    caption {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
 
     @keyframes spin {
       0% { transform: rotate(0deg); }
@@ -138,26 +157,38 @@
             </ul>
         </div>
     </div>
-  </div>
+    </div>
+    <div class="block-assignment">
+    <h2>tugas hari kedua</h2>
+    <p>Membuat variabel database menggunakan JavaScript.</p>
+    <div class="day-two">
+        <p align="center">Contoh variabel database menggunakan JavaScript:</p>
+        <table>
+    <caption>Aplikasi Kasir</caption>
+    <thead>
+      <tr>
+        <th>Produk</th>
+        <th>Harga (Rp)</th>
+      </tr>
+    </thead>
+    <tbody id="daftar-produk"></tbody>
+    <tfoot>
+      <tr>
+        <th>Total</th>
+        <th id="total-harga"></th>
+      </tr>
+      <tr>
+        <th>Bayar</th>
+        <th id="bayar"></th>
+      </tr>
+      <tr>
+        <th>Kembali</th>
+        <th id="kembali"></th>
+      </tr>
+    </tfoot>
+  </table>
   </div>
   </section>
-  <script>
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        document.getElementById("loading").style.display = "none";
-        document.getElementById("content").style.display = "block";
-      }, 3000);
-    });
-
-    function showAlert() {
-        alert("Halo nama saya Jaisyurrahman");
-    }
-    if (confirm("Apakah kamu sudah siap untuk melanjutkan?")) {
-        alert("OK, Selamat datang di website saya!");
-    } else {
-        alert("Kamu tidak siap untuk melanjutkan!,silahkan kembali,jangan balik lagi!!!");
-    }
-  </script>
-
+ <script src="script.js"></script>
 </body>
 </html>
